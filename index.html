@@ -3,88 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Miraç Aksoy</title>
+    <title>Killi Milli</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
-    </head>
+    <style>
+        body {
+            transition: background-color 0.5s ease;
+        }
+        .active-link {
+            color: rgb(0, 0, 0) !important;
+            background-color: #e26e10 !important;
+            border-radius: 5px;
+        }
+    </style>
+</head>
 <body>
     <!-- Header -->
-    <header class="bg-dark text-white py-3">
-        <div class="container d-flex justify-content-between align-items-center">
-            <img src="./images/logo.png" alt="logo" />
-        </div>
+    <header class="bg-dark text-white py-3 text-center">
+        <h1 class="h3">Killi Milli</h1>
     </header>
 
     <!-- Menü -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
         <div class="container">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link active" href="#">Anasayfa</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Hakkında</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Hizmetler</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">İletişim</a></li>
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link active-link" href="#slider">Anasayfa</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#kartlar">Kartlar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#hakkimizda">Hakkımızda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#bitmiyooo">Bitmiyooo</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <!-- Slider -->
-    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="images/f.jpg" class="d-block w-100" alt="Slider 1">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>BMW</h5>
-                    <p>M3 & M4</p>
+    <section id="slider">
+        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./images/MİM5.jpg" class="d-block w-100" alt="Slider 1">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>AnkaMall</h5>
+                        <p>Angara</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/MİM2.jpg" class="d-block w-100" alt="Slider 2">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>SASA</h5>
+                        <p>Kilimli</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/MİM3.jpg" class="d-block w-100" alt="Slider 3">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>ANITKABİR</h5>
+                        <p>Angara</p>
+                    </div>
                 </div>
             </div>
-            <div class="carousel-item">
-                <img src="images/bal.jpg" class="d-block w-100" alt="Slider 2">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>BMW</h5>
-                    <p>430i</p>
-                </div>
-            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Önceki</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Sonraki</span>
+            </button>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
+    </section>
 
-    <!-- Resimli Kutular -->
-    <section class="py-5">
+    <!-- Kartlar -->
+    <section id="kartlar" class="py-5 text-center">
         <div class="container">
-            <div class="row text-center">
+            <h2>Resimli Kartlar</h2>
+            <div class="row mt-4">
                 <div class="col-md-4">
                     <div class="card">
-                        <img src="images/a.jpg" class="card-img-top" alt="Resim 1">
+                        <img src="images/m3.jpg" class="card-img-top" alt="Resim 1">
                         <div class="card-body">
-                            <h5 class="card-title">520i</h5>
+                            <h5 class="card-title">MEHMET</h5>
+                            <p class="card-text">CAMCI</p>
+                            <button class="btn btn-primary" onclick="showModal('Kart 1')">Daha Fazla Bilgi</button>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card">
-                        <img src="images/b.jpg" class="card-img-top" alt="Resim 2">
+                        <img src="images/ı3.jpg" class="card-img-top" alt="Resim 2">
                         <div class="card-body">
-                            <h5 class="card-title">760Li</h5>
+                            <h5 class="card-title">İKBAL</h5>
+                            <p class="card-text">BAŞGAN</p>
+                            <button class="btn btn-primary" onclick="showModal('Kart 2')">Daha Fazla Bilgi</button>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card">
-                        <img src="images/c.jpg" class="card-img-top" alt="Resim 3">
+                        <img src="images/A1.jpg" class="card-img-top" alt="Resim 3">
                         <div class="card-body">
-                            <h5 class="card-title">M5</h5>
+                            <h5 class="card-title">MİRAÇ</h5>
+                            <p class="card-text">40K TRAMER</p>
+                            <button class="btn btn-primary" onclick="showModal('Kart 3')">Daha Fazla Bilgi</button>
                         </div>
                     </div>
                 </div>
@@ -92,12 +116,99 @@
         </div>
     </section>
 
+    <!-- Hakkımızda -->
+    <section id="hakkimizda" class="py-5 bg-light text-center">
+        <div class="container">
+            <h2>Hakkımızda</h2>
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <img src="images/İM.jpg" alt="Hakkımızda Görsel" class="img-fluid rounded">
+                </div>
+                <div class="col-md-6">
+                    <p>23/09/2022-∞ <br>
+                        (DEWAMKE)
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slider -->
+    <section id="bitmiyooo">
+        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./images/ı.jpg" class="d-block w-100" alt="Slider 1">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>İKBAL</h5>
+                        <p>DİĞER SEÇİM BAŞGAN</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/m.jpg" class="d-block w-100" alt="Slider 2">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>MEMOŞ</h5>
+                        <p>"CAMCI"</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/ADT.jpg" class="d-block w-100" alt="Slider 3">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>ADT</h5>
+                        <p>Hak Etti Gibi</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Geri</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">İleri</span>
+            </button>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="bg-dark text-white text-center py-3">
-        <p>&copy; MİRAÇ AKSOY</p>
+        <p>&copy; BU DAHA BAŞLANGIÇ</p>
     </footer>
 
-    <!-- Bootstrap JS -->
-    <script src="x""></script>
+    <!-- Modal -->
+    <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="infoModalLabel">Bilgi</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Kapat"></button>
+                </div>
+                <div class="modal-body" id="modalContent">
+                    Detaylar burada yer alacak.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap ve JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Sayaç Artırma
+        let counter = 0;
+        function incrementCounter() {
+            counter++;
+            document.getElementById("counter").innerText = counter;
+        }
+
+        // Modal Gösterimi
+        function showModal(content) {
+            document.getElementById("modalContent").innerText = `${content} hakkında daha fazla bilgi.`;
+            const modal = new bootstrap.Modal(document.getElementById("infoModal"));
+            modal.show();
+        }
+    </script>
 </body>
 </html>
